@@ -9,9 +9,33 @@ h3 {
     padding-bottom: 1em;
 }
 
-
 div.navbar-header{
     padding-left: 9.7em;
+}
+
+.col-md-4 {
+    float: right;
+    float: top;
+}
+
+.main, .metrics {
+    padding-bottom: 1em;
+}
+
+.metrics {
+    padding-top: 6em;
+}
+
+.submissionElem {
+    padding-bottom: 1em;
+}
+
+.resize {
+    display: inline-block;
+    width: 800px;
+    height: auto;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
 }
 
 .navbar-tab{
