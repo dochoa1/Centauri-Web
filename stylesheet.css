@@ -1,7 +1,15 @@
+* {
+    font-family: 'PT Serif', serif;
+}
+
 body {
     position: relative;
     padding-top: 5em;
     padding-left: 10em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Actor', sans-serif;
 }
 
 h3 {
