@@ -73,10 +73,18 @@ $(document).ready(function() {
     setTimeout(function() {
         $("#submissionTitle").html(submission[0].title);
 
-
+        //Kind of hacked together a way of showing all three images
         $("#thumbnail1").attr("src", submission[0].thumbnail + "1.png")
         $("#thumbnail2").attr("src", submission[0].thumbnail + "2.png")
         $("#thumbnail3").attr("src", submission[0].thumbnail + "3.png")
+
+        //Function to hide the img icons until they are actually loaded
+        $("img").each(function() {
+            var img = $(this);
+            img.on('load', function() {
+                $(this).css('visibility','visible');
+            });
+        });
 
 
         $("#authorNames").html(submission[0].authorNames)
