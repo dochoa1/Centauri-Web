@@ -29,14 +29,12 @@ function fillSubmissions(){
             var likes = item.val()['num-saves']
             var dislikes = item.val()['num-ignores']
             var id = item.val().id;
-            console.log(id);
             submissions.push({ //pushing an object of title, likes, and dislikes to array
                 title: title,
                 numLikes: likes,
                 numIgnores: dislikes,
                 id: id
             });
-            console.log(submissions[0].title)
         });
     });
 }
@@ -45,11 +43,8 @@ function fillSubmissions(){
 $(document).ready(function() {
     fillSubmissions();
     setTimeout(function() {
-        console.log(submissions[0].title)
         var numSubmissions = submissions.length;
         for (var i = 0; i < numSubmissions; i++){ //Over all submissions add them to a table
-            console.log(submissions[i].title);
-            console.log(submissions[i].id);
             var url = "submissionView.html?id=" + submissions[i].id; //I have escape here to url encode the titles
             $("#submissionTable").find('tbody')
                 .append($('<tr>')

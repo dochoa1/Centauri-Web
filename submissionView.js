@@ -53,8 +53,6 @@ function fillSubmissions(){
                     tagArray.push(property);
                 }
             }
-
-            console.log(tags);
             var id = item.val().id;
             submission.push({ //pushing an object of title, likes, and dislikes to array
                 title: title,
@@ -80,19 +78,12 @@ $(document).ready(function() {
         $("#likes").html(submission[0].numLikes)
         $("#dislikes").html(submission[0].numDislikes)
         $('#profile').html("Hello, " + contributorName);
-        // for (var i = 0; i < numTags; i++){ //Over all submissions add them to a table
-        //     $('#tagHeading').find('p')
-        //         .append($('<p>')
-        //             .text(submission[0].tags[i])
-        //     )
-        // }
         var numTags = submission[0].tags.length;
         var container = $('<div />');
-        for(var i = 0; i < numTags; i++) {
-         console.log("Hello")
-         container.append('<p>')
-            .text(submission[0].tags[i])
+        for(var i = 0; i < numTags - 1; i++) {
+         container.append('<span>' + submission[0].tags[i] + ',</span>')
         }
+        container.append('<span>' + submission[0].tags[numTags - 1] + '</span>')  //Hacky way of making sure that the last tag doesnt have a comma
         $('#tags').html(container);
     }, 2500)
 });
