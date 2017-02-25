@@ -43,6 +43,7 @@ function fillSubmissions(){
             var authorNames = item.val().content['author-names']
             var description = item.val().content['short-description']
             var thumbnail = item.val().content['thumbnail-url']
+            var linkUrl = item.val().content['link-url']
             var tags = item.val().tags;
             var tagArray = []
             for (var property in tags) {
@@ -61,6 +62,7 @@ function fillSubmissions(){
                 authorNames: authorNames,
                 description: description,
                 thumbnail: thumbnail,
+                linkUrl: linkUrl,
                 tags: tagArray,
                 id: id
             });
@@ -92,6 +94,7 @@ $(document).ready(function() {
         $("#likes").html(submission[0].numLikes)
         $("#dislikes").html(submission[0].numDislikes)
         $('#profile').html("Hello, " + contributorName);
+        $('#linkPaper').html(submission[0].title);
         var numTags = submission[0].tags.length;
         var container = $('<div />');
         for(var i = 0; i < numTags - 1; i++) {
