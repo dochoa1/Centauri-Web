@@ -44,11 +44,6 @@ function fillSubmissions(){
 //     $("#submissionHolder").val(curre);
 // });
 
-$(document).on("click", "table tr", function(e) {
-    $("submissionHolder")
-    console.log(this);
-});
-
 //Filling the user display
 $(document).ready(function() {
     fillSubmissions();
