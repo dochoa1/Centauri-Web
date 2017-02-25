@@ -20,6 +20,11 @@ span {
     padding-right: 0.5em;
 }
 
+#productName {
+    font-size: 1.9em;
+    padding-left: 12em;
+}
+
 .col-md-4 {
     float: right;
     float: top;
