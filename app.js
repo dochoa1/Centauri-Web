@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 // Get a reference to the database service
 var database = firebase.database();
 
-var contributorName = "John Doe"; //Hard coding this for now
+var contributorName = "Jane Roe"; //Hard coding this for now
 
 var usersDatabase = database.ref().child("/research-examples/"); //Querying this table
 
@@ -38,18 +38,6 @@ function fillSubmissions(){
     });
 }
 
-// function fillSubmissions(){
-//     $(mySubmissions).each(function(){
-//         var entry = $(this);
-//         var content = entry.child("content");
-//         content.on('value', function(snapshot) {
-//             console.log(snapshot.val().title)
-//             submissionTitles.push(snapshot.val().title);
-//             // $("#sub").html(snapshot.val().title);
-//         });
-//     });
-// }
-
 //Filling the user display
 $(document).ready(function() {
     fillSubmissions();
@@ -71,5 +59,6 @@ $(document).ready(function() {
                 )
         }
         $("#user").html(contributorName);  //Setting the users name
+        $('#profile').html("Hello, " + contributorName);
     }, 2000); //Time out because asynchronous
 });

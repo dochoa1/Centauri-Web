@@ -1,12 +1,22 @@
 body {
     position: relative;
     padding-top: 5em;
-    padding-left: 3em;
+    padding-left: 10em;
 }
 
 h3 {
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+
+div.navbar-header{
+    padding-left: 9.7em;
+}
+
+.navbar-tab{
+    padding-left: 5em;
+    font-size: 1.3em;
 }
 
 .container {

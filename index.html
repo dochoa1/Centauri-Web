@@ -23,14 +23,14 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Feed</a></li>
+                        <li class="navbar-tab"><a href="#">Feed</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-user"></span>&nbsp;<span>Hello</span>&nbsp;<span class="caret"></span></a>
+                        <span class="glyphicon glyphicon-user"></span>&nbsp;<span id="profile"></span>&nbsp;<span class="caret"></span></a>
                          <ul class="dropdown-menu">
-                           <li><a href="../features/logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Take to Log in page</a></li>
+                           <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Take to Log in page</a></li>
                          </ul>
                         </li>
                     </ul>
@@ -49,34 +49,21 @@
 
             <table id='submissionTable' class="table table-hover">
                 <tbody>
-                    <tr>
-                        <td>Machine Learning Paper</td>
-                        <td>Number of likes : 80</td>
-                        <td>Number of dislikes : 1000</td>
-                    </tr>
-                    <tr>
-                        <td>Computer Vision Paper</td>
-                        <td>Number of likes : 1000</td>
-                        <td>Number of dislikes : 80</td>
-                    </tr>
+                    <!-- <col width="50px" />
+                    <col width="30px" />
+                    <col width="30px" />
+                    -->
+                    <thead>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </thead>
                 </tbody>
             </table>
         </div>
-
-        <!--
-        <form id="userInfo">
-            Username:<br />
-            <input type="text" name="username" placeholder="Username" />
-            <br />
-            Email:<br />
-            <input type="email" name="email" placeholder="Email address" />
-            <br />
-            Bio:<br />
-            <input type="text" name="bio" placeholder="Enter a short bio" />
-        </form>
-
-        <button type="button" id="dataAdd">Submit</button>
-        -->
 
         <script type="text/javascript" src="app.js"></script>
     </body>
