@@ -38,6 +38,17 @@ function fillSubmissions(){
     });
 }
 
+// $("<tr>").hover(function() {
+//     var currentTitle = $(this);
+//     console.log(currentTitle);
+//     $("#submissionHolder").val(curre);
+// });
+
+$(document).on("click", "table tr", function(e) {
+    $("submissionHolder")
+    console.log(this);
+});
+
 //Filling the user display
 $(document).ready(function() {
     fillSubmissions();
@@ -45,10 +56,14 @@ $(document).ready(function() {
         console.log(submissions[0].title)
         var numSubmissions = submissions.length;
         for (var i = 0; i < numSubmissions; i++){ //Over all submissions add them to a table
+            console.log(submissions[i].title);
+            var url = "submissionView.html?title=" + escape(submissions[i].title); //I have escape here to url encode the titles
             $("#submissionTable").find('tbody')
                 .append($('<tr>')
                     .append($('<td>')
-                        .text(submissions[i].title)
+                        .append($('<a href=' + url + '></a>') //To take the user to a page that will give a closer look to this page
+                            .text(submissions[i].title)
+                        )
                     )
                     .append($('<td>')
                         .text(submissions[i].numLikes)
