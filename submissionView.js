@@ -72,7 +72,13 @@ $(document).ready(function() {
     fillSubmissions();
     setTimeout(function() {
         $("#submissionTitle").html(submission[0].title);
-        $("#thumbnail").attr("src", submission[0].thumbnail)
+
+
+        $("#thumbnail1").attr("src", submission[0].thumbnail + "1.png")
+        $("#thumbnail2").attr("src", submission[0].thumbnail + "2.png")
+        $("#thumbnail3").attr("src", submission[0].thumbnail + "3.png")
+
+
         $("#authorNames").html(submission[0].authorNames)
         $("#description").html(submission[0].description)
         $("#likes").html(submission[0].numLikes)

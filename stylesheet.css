@@ -52,10 +52,11 @@ span {
 
 .resize {
     display: inline-block;
-    width: 800px;
+    width: 275px;
     height: auto;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
+    padding-right: .8em;
 }
 
 .navbar-tab{
