@@ -2,26 +2,82 @@
 <!-- Use a single tab for tabbing -->
 <html>
     <head>
-        <title>example</title>
+        <title>Centauri-Web</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <p>
-            Hello
-        </p>
-        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyAonGxLN5Syz5jNH-4M2Y2i9SOsE24fgrk",
-            authDomain: "starter-3466e.firebaseapp.com",
-            databaseURL: "https://starter-3466e.firebaseio.com",
-            storageBucket: "starter-3466e.appspot.com",
-            messagingSenderId: "1035543870813"
-          };
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Submissions</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Feed</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-user"></span>&nbsp;<span>Hello</span>&nbsp;<span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                           <li><a href="../features/logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Take to Log in page</a></li>
+                         </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
 
-          // Get a reference to the database service
-          var database = firebase.database();
-          firebase.initializeApp(config);
-        </script>
+        <h1 id="user"></h1>
+
+        <p id="sub">
+        </p>
+
+        <div class="container">
+
+            <h3>Submissions</h3>
+
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <td>Machine Learning Paper</td>
+                        <td>Number of likes : 80</td>
+                        <td>Number of dislikes : 1000</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Vision Paper</td>
+                        <td>Number of likes : 1000</td>
+                        <td>Number of dislikes : 80</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--
+        <form id="userInfo">
+            Username:<br />
+            <input type="text" name="username" placeholder="Username" />
+            <br />
+            Email:<br />
+            <input type="email" name="email" placeholder="Email address" />
+            <br />
+            Bio:<br />
+            <input type="text" name="bio" placeholder="Enter a short bio" />
+        </form>
+
+        <button type="button" id="dataAdd">Submit</button>
+        -->
+
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>

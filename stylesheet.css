@@ -1,0 +1,18 @@
+body {
+    position: relative;
+    padding-top: 5em;
+    padding-left: 3em;
+}
+
+h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.container {
+    float:left;
+}
+
+.panel {
+    margin: 0.5em !important;
+}
