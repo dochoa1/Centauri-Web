@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Use a single tab for tabbing -->
+<html>
+    <head>
+        <title>example</title>
+    </head>
+    <body>
+        <p>
+            Hello
+        </p>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAonGxLN5Syz5jNH-4M2Y2i9SOsE24fgrk",
+            authDomain: "starter-3466e.firebaseapp.com",
+            databaseURL: "https://starter-3466e.firebaseio.com",
+            storageBucket: "starter-3466e.appspot.com",
+            messagingSenderId: "1035543870813"
+          };
+
+          // Get a reference to the database service
+          var database = firebase.database();
+          firebase.initializeApp(config);
+        </script>
+    </body>
+</html>
