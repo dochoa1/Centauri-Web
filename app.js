@@ -59,10 +59,10 @@ $(document).ready(function() {
                         )
                     )
                     .append($('<td>')
-                        .text(submissions[i].numLikes)
+                        .text("  " + submissions[i].numLikes)
                     )
                     .append($('<td>')
-                        .text(submissions[i].numIgnores)
+                        .text("  " + submissions[i].numIgnores)
                     )
                 )
         }

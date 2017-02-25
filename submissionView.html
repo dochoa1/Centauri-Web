@@ -20,13 +20,10 @@
                     <a class="navbar-brand" href="index.html">Submissions</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="navbar-tab"><a href="#">Feed</a></li>
-                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-user"></span>&nbsp;<span id="profile"></span>&nbsp;<span class="caret"></span></a>
+                        <span class="glyphicon glyphicon-home"></span>&nbsp;<span id="profile"></span>&nbsp;<span class="caret"></span></a>
                          <ul class="dropdown-menu">
                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Take to Log in page</a></li>
                          </ul>
@@ -44,23 +41,25 @@
                     <h4>Description:</h4>
                     <p id="description" class="submissionElem">
                     </p>
+                    <h4 id="tagHeading">Tags:</h4>
+                    <p id="tags" class="submissionElem">
+                    </p>
                 </div>
 
             <div class="col-md-4 metrics">
                 <h2>Metrics</h2>
                 <hr/>
-                <h4 >Author Name(s):</h4>
-                <p id="authorNames" class="submissionElem">
-                </p>
-                <h4>Number of Likes:</h4>
+                <h4><span class="glyphicon glyphicon-user"></span>Author Name(s):</h4>
+                <p id="authorNames" class="submissionElem"></p>
+                <h4><span class="glyphicon glyphicon-heart"></span>Number of Saves:</h4>
                 <p id="likes" class="submissionElem">
                 </p>
-                <h4>Number of Dislikes:</h4>
+                <h4><span class="glyphicon glyphicon-ban-circle"></span>Number of Ignores:</h4>
                 <p id="dislikes" class="submissionElem">
                 </p>
             </div>
         </div>
 
-        <script type="text/javascript" src="submissionViewJs.js"></script>
+        <script type="text/javascript" src="submissionView.js"></script>
     </body>
 </html>

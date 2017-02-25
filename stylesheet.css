@@ -6,11 +6,18 @@ body {
 
 h3 {
     padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 div.navbar-header{
     padding-left: 9.7em;
+}
+
+th {
+    font-size: 1.5em;
+}
+
+span {
+    padding-right: 0.5em;
 }
 
 .col-md-4 {

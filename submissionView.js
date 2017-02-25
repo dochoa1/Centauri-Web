@@ -8,7 +8,6 @@ function getUrlVars() {
   }
 
 var id = getUrlVars()["id"]
-console.log(id);
 id = decodeURIComponent(id)
 
 var config = {
@@ -45,8 +44,18 @@ function fillSubmissions(){
             var description = item.val().content['short-description']
             var thumbnail = item.val().content['thumbnail-url']
             var tags = item.val().tags;
+            var tagArray = []
+            for (var property in tags) {
+                if (tags.hasOwnProperty(property)) {
+                    console.log(property)
+                    var newchar = ' '
+                    property = property.split('_').join(newchar);
+                    tagArray.push(property);
+                }
+            }
+
+            console.log(tags);
             var id = item.val().id;
-            console.log(id);
             submission.push({ //pushing an object of title, likes, and dislikes to array
                 title: title,
                 numLikes: likes,
@@ -54,25 +63,36 @@ function fillSubmissions(){
                 authorNames: authorNames,
                 description: description,
                 thumbnail: thumbnail,
-                tags: tags,
+                tags: tagArray,
                 id: id
             });
-            console.log(submission[0].title)
         });
     })
 }
 
 $(document).ready(function() {
-    console.log("HELLo")
     fillSubmissions();
     setTimeout(function() {
         $("#submissionTitle").html(submission[0].title);
-        console.log(submission[0].thumbnail)
         $("#thumbnail").attr("src", submission[0].thumbnail)
-        console.log(submission[0].title);
         $("#authorNames").html(submission[0].authorNames)
         $("#description").html(submission[0].description)
         $("#likes").html(submission[0].numLikes)
         $("#dislikes").html(submission[0].numDislikes)
-    }, 2000)
+        $('#profile').html("Hello, " + contributorName);
+        // for (var i = 0; i < numTags; i++){ //Over all submissions add them to a table
+        //     $('#tagHeading').find('p')
+        //         .append($('<p>')
+        //             .text(submission[0].tags[i])
+        //     )
+        // }
+        var numTags = submission[0].tags.length;
+        var container = $('<div />');
+        for(var i = 0; i < numTags; i++) {
+         console.log("Hello")
+         container.append('<p>')
+            .text(submission[0].tags[i])
+        }
+        $('#tags').html(container);
+    }, 2500)
 });
